@@ -1,0 +1,394 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700|Raleway:400,700&display=swap&subset=latin-ext');
+/*
+
+    font-family: 'Raleway', sans-serif;
+
+    font-family: 'Open Sans', sans-serif;
+
+*/
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+
+h1 {
+    font-size: 38px;
+}
+
+h1,
+h2,
+h4 {
+    font-family: 'Raleway', sans-serif;
+    color: hsl(243, 87%, 12%)
+}
+
+.wrapper {
+    width: 1440px;
+    display: flex;
+    margin: 15px auto;
+    justify-content: space-between;
+
+
+
+}
+
+nav {
+    display: flex;
+    justify-content: space-around;
+
+}
+
+nav ul {
+    display: flex;
+    align-items: center;
+}
+
+nav li {
+    list-style: none;
+}
+
+nav a {
+    display: block;
+    margin-left: 40px;
+    text-decoration: none;
+    color: black;
+    font-family: 'Raleway', sans-serif;
+
+}
+
+.main-card {
+    margin: 30px 0;
+    padding: 30px;
+    width: 55%;
+    box-shadow: 0 0 5px #888;
+}
+
+.user-card {
+    display: flex;
+
+}
+
+.user-img img {
+    width: 50px;
+    align-items: center;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.user-info p {
+    margin: 0;
+}
+
+.user-info h4 {
+    font-size: 15px;
+}
+
+.user-info p {
+    font-size: 13px;
+}
+
+.icon-quotes img {
+    height: 18px;
+}
+
+.flex-container {
+    display: flex;
+
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+}
+
+.col {
+    align-self: center;
+    margin: 150px 0;
+
+
+
+}
+
+.ilustration {
+    height: 550px;
+}
+
+.stay-productive {
+    background-image: url("images/bg-curve-desktop.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    flex-direction: column;
+}
+
+.stay-productive a {
+    color: hsl(170, 45%, 43%);
+}
+
+
+.intro {
+    flex-direction: column;
+}
+
+.intro h1,
+p,
+input,
+button {
+    margin: 10px 0;
+
+}
+
+.intro input {
+    width: 40%;
+    height: 35px;
+    background-color: none;
+}
+
+.intro button {
+    width: 25%;
+    height: 35px;
+    background-color: hsl(224, 93%, 58%);
+    border: none;
+    color: white;
+    font-weight: 700;
+    box-shadow: 0 0 10px #999;
+}
+
+.col-email input {
+    width: 100%;
+
+}
+
+.features {
+    background-color: hsl(238, 22%, 44%);
+
+
+
+}
+
+.features h2 {
+    color: white;
+}
+
+.features p {
+    color: white;
+    margin-right: 350px;
+}
+
+.features input {
+    width: 100%;
+    height: 35px;
+}
+
+.features button {
+    height: 35px;
+    background-color: hsl(224, 93%, 58%);
+    color: white;
+    border: none;
+    padding: 0 15px;
+    box-shadow: 0 0 1px #999;
+    font-weight: 700;
+}
+
+footer {
+    background-color: hsl(243, 87%, 12%);
+}
+
+.attribution a {
+    color: white;
+
+}
+
+.attribution {
+    text-align: center;
+    background-color: hsl(243, 87%, 12%);
+    margin: 0 0;
+    color: white;
+}
+
+footer {
+    color: white;
+
+}
+
+.logo_white {
+    filter: invert(100%);
+}
+
+.phone {
+    display: flex;
+}
+
+.phone img {
+    height: 20px;
+    align-self: center;
+    margin-right: 10px;
+}
+
+.email {
+    display: flex;
+}
+
+.email img {
+    height: 20px;
+    align-self: center;
+    margin-right: 10px;
+}
+
+
+
+@media (max-width:1025px) {
+    .wrapper {
+        width: 100%;
+
+    }
+
+    section {
+        margin-bottom: 100px;
+    }
+
+    .mobile {
+        flex-direction: column;
+    }
+
+    .logo img {
+        height: 30px;
+    }
+
+
+    .order-1 {
+        order: 1;
+    }
+
+    .order-2 {
+        order: 2;
+    }
+
+
+
+    .intro input {
+        width: 95%;
+        margin: 10px auto;
+        border: 1px solid #999;
+        display: block;
+    }
+
+    .intro button {
+        width: 60%;
+        margin: 0 auto;
+        display: block;
+    }
+
+    .col h1 {
+        text-align: center;
+        font-size: 33px;
+    }
+
+    .nav-mobile {
+        display: flex;
+    }
+
+    .col {
+
+        width: 100%;
+        align-items: center;
+        margin: 0 0;
+    }
+
+    .flex-container {
+        display: block;
+    }
+
+    .stay-productive h1 {
+        margin: 80px auto 40px auto;
+        width: 95%;
+
+    }
+
+    .stay-productive p {
+        margin: 0 auto;
+        width: 95%;
+    }
+
+    .stay-productive {
+        padding: 30px 0;
+        margin: 0 0;
+    }
+
+    .stay-productive a {
+        display: block;
+        margin: 30px auto;
+        width: 95%;
+        text-align: center;
+    }
+
+    .main-card {
+        height: auto;
+        width: 90%;
+        margin: 30px auto;
+        padding: 0 0;
+    }
+
+    .main-card p {
+        width: 100%;
+        padding: 15px 0;
+    }
+
+    .user-info p {
+        padding: 0;
+    }
+
+    .ilustration {
+        display: block;
+        height: auto;
+        width: 100%;
+    }
+
+    .features p {
+        margin: 0;
+    }
+
+
+    .features {
+        padding: 35px;
+        margin: 0 0;
+    }
+
+    .features h2,
+    p {
+        text-align: center;
+        margin: 20px;
+    }
+
+    .features p {
+        margin: 20px;
+    }
+
+    .features button {
+        margin: 20px auto;
+        display: block;
+    }
+
+    nav li {
+        list-style: none;
+        margin: 0 15px;
+        font-size: 0.8em;
+    }
+
+    nav ul {
+        display: flex;
+    }
+
+    nav a {
+        display: block;
+        margin-left: 0;
+        text-decoration: none;
+        color: black;
+        font-family: 'Raleway', sans-serif;
+
+    }
+}
