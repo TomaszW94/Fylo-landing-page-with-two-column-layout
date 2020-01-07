@@ -26,9 +26,7 @@ h4 {
     color: hsl(243, 87%, 12%);
 }
 
-body {
-    background-color: hsl(240, 75%, 98%);
-}
+
 
 .flex-container {
     display: flex;
