@@ -23,25 +23,38 @@ h1,
 h2,
 h4 {
     font-family: 'Raleway', sans-serif;
-    color: hsl(243, 87%, 12%)
+    color: hsl(243, 87%, 12%);
+}
+
+body {
+    background-color: hsl(240, 75%, 98%);
+}
+
+.flex-container {
+    display: flex;
+}
+
+.col-footer {
+    display: flex;
+    flex-direction: column;
+}
+.col {
+    align-self: center;
+    margin: 150px 0px;
 }
 
 .wrapper {
     width: 1440px;
     display: flex;
-    margin: 15px auto;
+    margin: 20px auto;
     justify-content: space-between;
-
-
-
 }
 
-nav {
-    display: flex;
-    justify-content: space-around;
-
+.ilustration {
+    height: 550px;
 }
 
+/* NAV --------------- */
 nav ul {
     display: flex;
     align-items: center;
@@ -50,26 +63,80 @@ nav ul {
 nav li {
     list-style: none;
 }
-
 nav a {
     display: block;
     margin-left: 40px;
     text-decoration: none;
     color: black;
     font-family: 'Raleway', sans-serif;
+}
+
+nav a::before {
+    content: "";
+    display: block;
+    height: 3px;
+    background-color: hsl(238, 22%, 44%);
+    opacity: 0;
+    transition: .3s;
+}
+
+nav a:hover::before {
+    opacity: 1;
+}
+
+/* SECTIOn  1 ------------- */
+
+.intro h1 {
+    margin: 10px 0;
+}
+
+.intro p {
+    margin: 10px 0;
+}
+
+.intro input {
+    margin: 10px 0;
+    width: 40%;
+    height: 35px;
 
 }
 
+.intro button {
+    margin: 10px 0;
+    width: 25%;
+    height: 35px;
+    background-color: hsl(224, 93%, 58%);
+    border: none;
+    color: white;
+    font-weight: 700;
+    box-shadow: 0 0 10px #999;
+    cursor: pointer;
+}
+
+
+.col-email input {
+    width: 100%;
+
+}
+
+
+/* MAIN-card ------------- */
+
 .main-card {
-    margin: 30px 0;
+    margin-top: 30px;
     padding: 30px;
     width: 55%;
     box-shadow: 0 0 5px #888;
+    transition: .5s;
+}
+
+.main-card:hover {
+    box-shadow: 0 0 20px #888;
 }
 
 .user-card {
     display: flex;
-
+    margin: 12px 0px;
 }
 
 .user-img img {
@@ -81,110 +148,96 @@ nav a {
 
 .user-info p {
     margin: 0;
+    font-size: 13px;
 }
 
 .user-info h4 {
     font-size: 15px;
 }
 
-.user-info p {
-    font-size: 13px;
-}
-
 .icon-quotes img {
     height: 18px;
 }
 
-.flex-container {
-    display: flex;
 
-}
-
-.row {
-    display: flex;
-    justify-content: space-between;
-}
-
-.col {
-    align-self: center;
-    margin: 150px 0;
-
-
-
-}
-
-.ilustration {
-    height: 550px;
-}
-
+/* SECTION 2 ---------- */
 .stay-productive {
     background-image: url("images/bg-curve-desktop.svg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    flex-direction: column;
 }
 
 .stay-productive a {
     color: hsl(170, 45%, 43%);
 }
 
-
-.intro {
-    flex-direction: column;
+.stay-productive h1 {
+    margin: 10px 0px;
 }
 
-.intro h1,
-p,
-input,
-button {
-    margin: 10px 0;
+/* MAIN-card ------------- */
 
+.main-card {
+    margin-top: 30px;
+    padding: 30px;
+    width: 55%;
+    box-shadow: 0 0 5px #888;
+    transition: .5s;
 }
 
-.intro input {
-    width: 40%;
-    height: 35px;
-    background-color: none;
+.main-card:hover {
+    box-shadow: 0 0 20px #888;
 }
 
-.intro button {
-    width: 25%;
-    height: 35px;
-    background-color: hsl(224, 93%, 58%);
-    border: none;
-    color: white;
-    font-weight: 700;
-    box-shadow: 0 0 10px #999;
+.user-card {
+    display: flex;
+    margin: 12px 0px;
 }
 
-.col-email input {
-    width: 100%;
-
+.user-img img {
+    width: 50px;
+    align-items: center;
+    border-radius: 50%;
+    margin-right: 10px;
 }
 
-.features {
+.user-info p {
+    margin: 0;
+    font-size: 13px;
+}
+
+.user-info h4 {
+    font-size: 15px;
+}
+
+.icon-quotes img {
+    height: 18px;
+}
+
+/* SECTION 3 ----------- */
+
+.early-access {
     background-color: hsl(238, 22%, 44%);
-
-
-
 }
 
-.features h2 {
+.early-access h2 {
     color: white;
+    margin: 10px 0px;
 }
 
-.features p {
+.early-access p {
     color: white;
-    margin-right: 350px;
+    width: 50%;
 }
 
-.features input {
+.early-access input {
     width: 100%;
     height: 35px;
 }
 
-.features button {
+.early-access button {
+    margin: 10px 0px;
     height: 35px;
     background-color: hsl(224, 93%, 58%);
     color: white;
@@ -192,15 +245,89 @@ button {
     padding: 0 15px;
     box-shadow: 0 0 1px #999;
     font-weight: 700;
+    cursor: pointer;
 }
 
+/* FOOTER ------------------------- */
+
 footer {
+    color: white;
+    padding: 150px;
     background-color: hsl(243, 87%, 12%);
+}
+
+footer a {
+    text-decoration: none;
+    color: white;
+    margin: 0 0;
+}
+
+footer a:hover {
+    opacity: 0.65;
+}
+
+.icon-phone,
+.icon-email {
+    display: flex;
+    margin: 15px auto;
+}
+
+.icon-email img,
+.icon-phone img {
+    height: 20px;
+    align-self: center;
+    margin-right: 10px;
+}
+
+.icon-socialntw {
+    display: flex;
+    align-self: flex-start;
+    margin-top: 64px;
+}
+
+.icon-socialntw i {
+    margin: 0 5px;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    border: 2px solid #ffff;
+    text-align: center;
+    line-height: 32px;
+}
+
+.col-contact {
+    margin-top: 32px;
+    display: flex;
+    align-self: center;
+    flex-direction: column;
+
+}
+
+footer>.wrapper {
+    margin: 0 auto;
+}
+
+footer>.wrapper.col {
+    margin: 0 0;
+}
+
+.col-about {
+    display: flex;
+    align-self: center;
+    flex-direction: column;
+    margin-top: 63px;
+}
+
+.col-about a {
+    margin: 5px 0;
+}
+
+.col-contact a {
+    margin: 5px 0;
 }
 
 .attribution a {
     color: white;
-
 }
 
 .attribution {
@@ -210,41 +337,14 @@ footer {
     color: white;
 }
 
-footer {
-    color: white;
-
-}
-
-.logo_white {
-    filter: invert(100%);
-}
-
-.phone {
-    display: flex;
-}
-
-.phone img {
-    height: 20px;
-    align-self: center;
-    margin-right: 10px;
-}
-
-.email {
-    display: flex;
-}
-
-.email img {
-    height: 20px;
-    align-self: center;
-    margin-right: 10px;
-}
-
-
-
 @media (max-width:1025px) {
     .wrapper {
         width: 100%;
+    }
 
+    .intro p {
+        width: 80%;
+        margin: 20px auto;
     }
 
     section {
@@ -268,50 +368,42 @@ footer {
         order: 2;
     }
 
-
-
     .intro input {
-        width: 95%;
+        width: 80%;
         margin: 10px auto;
         border: 1px solid #999;
         display: block;
     }
 
     .intro button {
-        width: 60%;
+        width: 80%;
         margin: 0 auto;
         display: block;
     }
 
+    .col {
+        margin: 0 0;
+    }
+
     .col h1 {
         text-align: center;
-        font-size: 33px;
+        font-size: 25px;
     }
 
     .nav-mobile {
         display: flex;
     }
 
-    .col {
-
-        width: 100%;
-        align-items: center;
-        margin: 0 0;
-    }
-
-    .flex-container {
-        display: block;
-    }
-
     .stay-productive h1 {
         margin: 80px auto 40px auto;
         width: 95%;
-
+        font-size: 20px;
     }
 
     .stay-productive p {
         margin: 0 auto;
         width: 95%;
+        text-align: left;
     }
 
     .stay-productive {
@@ -328,9 +420,9 @@ footer {
 
     .main-card {
         height: auto;
-        width: 90%;
+        width: 98%;
         margin: 30px auto;
-        padding: 0 0;
+        padding: 20px 10px;
     }
 
     .main-card p {
@@ -348,28 +440,26 @@ footer {
         width: 100%;
     }
 
-    .features p {
-        margin: 0;
-    }
-
-
-    .features {
-        padding: 35px;
+    .early-access {
+        padding: 0;
         margin: 0 0;
     }
 
-    .features h2,
-    p {
+    .early-access h2 {
         text-align: center;
-        margin: 20px;
+        margin: 0 0;
     }
 
-    .features p {
-        margin: 20px;
-    }
-
-    .features button {
+    .early-access p {
         margin: 20px auto;
+        padding: 0;
+        width: 80%;
+        text-align: center;
+    }
+
+    .early-access input {
+        width: 65%;
+        margin: 5px auto;
         display: block;
     }
 
@@ -389,6 +479,41 @@ footer {
         text-decoration: none;
         color: black;
         font-family: 'Raleway', sans-serif;
+    }
 
+    footer {
+        padding: 40px;
+    }
+
+    .logo-footer img {
+        height: 55px;
+        margin-bottom: 30px;
+    }
+
+    .email {
+        margin-bottom: 30px;
+    }
+
+    .col-contact {
+        align-self: flex-start;
+        margin: 40px 0;
+    }
+
+    .col-email {
+        align-self: auto;
+    }
+
+    .early-access button {
+        margin: 10px auto;
+        display: block;
+        width: 65%;
+    }
+
+    .icon-socialntw {
+        align-self: center;
+    }
+
+    .col-about {
+        align-self: flex-start;
     }
 }
